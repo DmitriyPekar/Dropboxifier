@@ -1,0 +1,215 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{36B9B44B-F60A-443F-9A4B-F9FD33627CF9}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Dropboxifier</RootNamespace>
+    <AssemblyName>Dropboxifier</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="FileUtils.cs" />
+    <Compile Include="Model\NotifyPropertyChangedBase.cs" />
+    <Compile Include="Validators\FolderValidator.cs" />
+    <Compile Include="Validators\LinkedFolderValidator.cs" />
+    <Compile Include="Validators\LinkNameValidator.cs" />
+    <Compile Include="ViewModel\ViewModelBase.cs" />
+    <Compile Include="_lib\Ookii.Dialogs.Wpf\AnimationResource.cs" />
+    <Compile Include="_lib\Ookii.Dialogs.Wpf\ButtonType.cs" />
+    <Compile Include="_lib\Ookii.Dialogs.Wpf\ComCtlv6ActivationContext.cs" />
+    <Compile Include="_lib\Ookii.Dialogs.Wpf\CredentialDialog.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="_lib\Ookii.Dialogs.Wpf\CredentialDialog.designer.cs">
+      <DependentUpon>CredentialDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="_lib\Ookii.Dialogs.Wpf\CredentialException.cs" />
+    <Compile Include="_lib\Ookii.Dialogs.Wpf\DownlevelTextMode.cs" />
+    <Compile Include="_lib\Ookii.Dialogs.Wpf\ExpandButtonClickedEventArgs.cs" />
+    <Compile Include="_lib\Ookii.Dialogs.Wpf\GlobalSuppressions.cs" />
+    <Compile Include="_lib\Ookii.Dialogs.Wpf\HyperlinkClickedEventArgs.cs" />
+    <Compile Include="_lib\Ookii.Dialogs.Wpf\Interop\ComDlgResources.cs" />
+    <Compile Include="_lib\Ookii.Dialogs.Wpf\Interop\COMGuids.cs" />
+    <Compile Include="_lib\Ookii.Dialogs.Wpf\Interop\ErrorHelper.cs" />
+    <Compile Include="_lib\Ookii.Dialogs.Wpf\Interop\IProgressDialog.cs" />
+    <Compile Include="_lib\Ookii.Dialogs.Wpf\Interop\ShellComInterfaces.cs" />
+    <Compile Include="_lib\Ookii.Dialogs.Wpf\Interop\ShellWrapperDefinitions.cs" />
+    <Compile Include="_lib\Ookii.Dialogs.Wpf\Interop\Win32Resources.cs" />
+    <Compile Include="_lib\Ookii.Dialogs.Wpf\NativeMethods.cs" />
+    <Compile Include="_lib\Ookii.Dialogs.Wpf\ProgressBarState.cs" />
+    <Compile Include="_lib\Ookii.Dialogs.Wpf\ProgressBarStyle.cs" />
+    <Compile Include="_lib\Ookii.Dialogs.Wpf\ProgressDialog.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="_lib\Ookii.Dialogs.Wpf\ProgressDialog.designer.cs">
+      <DependentUpon>ProgressDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="_lib\Ookii.Dialogs.Wpf\Properties\Resources.Designer.cs" />
+    <Compile Include="_lib\Ookii.Dialogs.Wpf\SafeHandles.cs" />
+    <Compile Include="_lib\Ookii.Dialogs.Wpf\ShellAnimation.cs" />
+    <Compile Include="_lib\Ookii.Dialogs.Wpf\TaskDialog.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="_lib\Ookii.Dialogs.Wpf\TaskDialog.designer.cs">
+      <DependentUpon>TaskDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="_lib\Ookii.Dialogs.Wpf\TaskDialogButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="_lib\Ookii.Dialogs.Wpf\TaskDialogButtonStyle.cs" />
+    <Compile Include="_lib\Ookii.Dialogs.Wpf\TaskDialogDesigner.cs" />
+    <Compile Include="_lib\Ookii.Dialogs.Wpf\TaskDialogIcon.cs" />
+    <Compile Include="_lib\Ookii.Dialogs.Wpf\TaskDialogItem.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="_lib\Ookii.Dialogs.Wpf\TaskDialogItem.designer.cs">
+      <DependentUpon>TaskDialogItem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="_lib\Ookii.Dialogs.Wpf\TaskDialogItemClickedEventArgs.cs" />
+    <Compile Include="_lib\Ookii.Dialogs.Wpf\TaskDialogItemCollection.cs" />
+    <Compile Include="_lib\Ookii.Dialogs.Wpf\TaskDialogRadioButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="_lib\Ookii.Dialogs.Wpf\TimerEventArgs.cs" />
+    <Compile Include="_lib\Ookii.Dialogs.Wpf\VistaFileDialog.cs" />
+    <Compile Include="_lib\Ookii.Dialogs.Wpf\VistaFileDialogEvents.cs" />
+    <Compile Include="_lib\Ookii.Dialogs.Wpf\VistaFolderBrowserDialog.cs" />
+    <Compile Include="_lib\Ookii.Dialogs.Wpf\VistaOpenFileDialog.cs" />
+    <Compile Include="_lib\Ookii.Dialogs.Wpf\VistaSaveFileDialog.cs" />
+    <Page Include="MainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Model\LinkedFolder.cs" />
+    <Compile Include="Utils.cs" />
+    <Compile Include="ViewModel\DropboxifierViewModel.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="_lib\Ookii.Dialogs.Wpf\ProgressDialog.resx">
+      <DependentUpon>ProgressDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="_lib\Ookii.Dialogs.Wpf\Properties\Resources.resx" />
+    <None Include="app.config" />
+    <None Include="app.manifest" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <AppDesigner Include="Properties\" />
+    <None Include="_lib\Ookii.Dialogs.Wpf\ookii.snk" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Properties\DataSources\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Drop-Box-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="_lib\Ookii.Dialogs.Wpf\CredentialDialog.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="_lib\Ookii.Dialogs.Wpf\CustomDictionary.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="_lib\Ookii.Dialogs.Wpf\ProgressDialog.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="_lib\Ookii.Dialogs.Wpf\TaskDialog.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="_lib\Ookii.Dialogs.Wpf\VistaFolderBrowserDialog.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="_lib\Ookii.Dialogs.Wpf\VistaOpenFileDialog.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="_lib\Ookii.Dialogs.Wpf\VistaSaveFileDialog.bmp" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
